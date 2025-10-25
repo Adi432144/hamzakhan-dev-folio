@@ -16,7 +16,7 @@ Follow these steps:
 git clone github.com/mohd-hamza-khan/hamzakhan-dev-folio.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd hamzakhan-dev-folio
 
 # Step 3: Install the necessary dependencies.
 npm i
