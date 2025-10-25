@@ -82,7 +82,6 @@ export function Projects() {
                 {project.tags.map((tag, tagIndex) => (
                   <Badge
                     key={tagIndex}
-                    variant="secondary"
                     className="text-xs"
                   >
                     {tag}
@@ -92,9 +91,7 @@ export function Projects() {
 
               <div className="flex gap-2 pt-4 border-t border-border">
                 <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex-1 transition-smooth hover:scale-105"
+                  className="flex-1 transition-smooth hover:scale-105 btn-outline"
                   asChild
                 >
                   <a
@@ -108,7 +105,6 @@ export function Projects() {
                 </Button>
                 {project.demo && (
                   <Button
-                    size="sm"
                     className="flex-1 bg-accent hover:bg-accent/90 transition-smooth hover:scale-105"
                     asChild
                   >

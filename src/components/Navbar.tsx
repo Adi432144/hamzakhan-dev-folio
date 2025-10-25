@@ -56,8 +56,6 @@ export function Navbar() {
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <Button
-              variant="ghost"
-              size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X /> : <Menu />}

@@ -1,5 +1,4 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -42,49 +41,35 @@ export function Footer() {
           </div>
 
           {/* Connect */}
+          {/* Connect */}
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex gap-3">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
-                asChild
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="inline-flex items-center justify-center p-2 rounded-md text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
               >
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
-                asChild
+                <Github className="h-5 w-5" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex items-center justify-center p-2 rounded-md text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
               >
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
-                asChild
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="mailto:hamza@example.com"
+                aria-label="Email"
+                className="inline-flex items-center justify-center p-2 rounded-md text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
               >
-                <a href="mailto:hamza@example.com" aria-label="Email">
-                  <Mail className="h-5 w-5" />
-                </a>
-              </Button>
+                <Mail className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>

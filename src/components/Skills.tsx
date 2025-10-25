@@ -84,7 +84,6 @@ export function Skills() {
                 {category.skills.map((skill, skillIndex) => (
                   <Badge
                     key={skillIndex}
-                    variant="outline"
                     className={`${category.color} hover:scale-105 transition-smooth cursor-default`}
                   >
                     {skill}

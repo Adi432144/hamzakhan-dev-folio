@@ -1,8 +1,9 @@
+import * as React from "react";
 import { ArrowDown, Github, Linkedin, Mail, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
-export function Hero() {
+export const Hero: React.FC = () => {
   return (
     <section
       id="home"
@@ -14,6 +15,8 @@ export function Hero() {
           src={heroBg}
           alt="Hero background"
           className="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 gradient-hero opacity-90" />
       </div>
@@ -45,22 +48,19 @@ export function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-accent transition-smooth hover:scale-105"
+              className="px-6 py-3 bg-accent hover:bg-accent/90 text-accent-foreground shadow-accent transition-smooth hover:scale-105"
               asChild
             >
-              <a href="#projects">
+              <a href="#projects" aria-label="View My Work">
                 View My Work
                 <ArrowDown className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 transition-smooth hover:scale-105"
+              className="px-6 py-3 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 transition-smooth hover:scale-105"
               asChild
             >
-              <a href="#contact">
+              <a href="/resume.pdf" aria-label="Download Resume" download>
                 <FileDown className="mr-2 h-4 w-4" />
                 Download Resume
               </a>
@@ -70,13 +70,11 @@ export function Hero() {
           {/* Social Links */}
           <div className="flex gap-4 justify-center">
             <Button
-              variant="ghost"
-              size="icon"
               className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
               asChild
             >
               <a
-                href="https://github.com"
+                href="https://github.com/your-username"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -85,13 +83,11 @@ export function Hero() {
               </a>
             </Button>
             <Button
-              variant="ghost"
-              size="icon"
               className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
               asChild
             >
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/your-profile"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -100,8 +96,6 @@ export function Hero() {
               </a>
             </Button>
             <Button
-              variant="ghost"
-              size="icon"
               className="text-primary-foreground hover:text-accent hover:bg-primary-foreground/10 transition-smooth hover:scale-110"
               asChild
             >
@@ -114,9 +108,9 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
         <ArrowDown className="h-6 w-6 text-primary-foreground/60" />
       </div>
     </section>
   );
-}
+};

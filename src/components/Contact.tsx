@@ -101,7 +101,6 @@ export function Contact() {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full bg-accent hover:bg-accent/90 transition-smooth hover:scale-105"
-                size="lg"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send className="ml-2 h-4 w-4" />

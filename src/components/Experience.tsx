@@ -111,7 +111,7 @@ export function Experience() {
 
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary" className="text-xs">
+                      <Badge key={tagIndex} className="text-xs bg-secondary">
                         {tag}
                       </Badge>
                     ))}

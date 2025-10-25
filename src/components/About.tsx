@@ -47,7 +47,6 @@ export function About() {
               intelligent AI models, I'm committed to pushing the boundaries of what's possible.
             </p>
             <Button
-              size="lg"
               className="bg-accent hover:bg-accent/90 shadow-soft transition-smooth hover:scale-105"
               asChild
             >
